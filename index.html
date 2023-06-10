@@ -86,7 +86,7 @@
         <button class="header__responsive-package">
           <a href="pay.html" style="color: black;">
             <i class="fa-solid fa-cart-shopping"></i>
-            <span>3</span>
+            <span id="index_sp"></span>
           </a>
         </button>
       </div>
@@ -477,6 +477,16 @@
         var header = this.document.querySelector("#header__responsive");
         header.classList.toggle("sticky", this.window.scrollY > 0);
       });
+      function setItem() {
+        var count = 0;
+        for (let i = 1; i <= 30; i++) {
+            var x = localStorage.getItem(i);
+            if(x > 0) count += parseInt(x);
+        }
+        document.getElementById("index_sp").innerHTML = count;
+      }
+       
+      setItem();      
     </script>
 
     <!--Javascript Header responsive navbar -->

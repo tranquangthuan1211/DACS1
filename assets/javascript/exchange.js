@@ -79,3 +79,14 @@ function showT(curArray) {
         `;
   }
 }
+
+function setItem() {
+  var count = 0;
+  for (let i = 1; i <= 30; i++) {
+      var x = localStorage.getItem(i);
+      if(x > 0) count += parseInt(x);
+  }
+  document.getElementById("exchange_sp").innerHTML = count;
+}
+ 
+setItem();

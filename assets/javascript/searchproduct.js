@@ -219,11 +219,25 @@ document.getElementById("search__input").addEventListener("keyup", function () {
   }
 });
 
+
+function setItem() {
+  var count = 0;
+  for (let i = 1; i <= 30; i++) {
+      var x = localStorage.getItem(i);
+      if(x > 0) count += parseInt(x);
+  }
+  document.getElementById("product_sp").innerHTML = count;
+}
+ 
+setItem(); 
+
 galleryArray.forEach((value) => {
   document.getElementById(`id_${value.id}`).onclick = () => {
       var count = localStorage.getItem(value.id);
       count === null ? count = 1 : count++;
       localStorage.setItem(value.id, count);
       alert("Đã thêm sản phẩm vào thanh toán");
+      var x = document.getElementById('product_sp').innerHTML;
+      document.getElementById("product_sp").innerHTML = parseInt(x) + 1;
   }
 })
