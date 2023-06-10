@@ -188,7 +188,7 @@ function showGallery(curArray) {
                         <p>${curArray[i].price}.000đ</p>
                         <div class = "category__item-icon">
                             <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-cart-shopping"></i>
+                            <i id="id_${curArray[i].id}" class="fa-solid fa-cart-shopping"></i>
                         </div>
                     </div>
                 </div>
@@ -218,3 +218,12 @@ document.getElementById("search__input").addEventListener("keyup", function () {
     }
   }
 });
+
+galleryArray.forEach((value) => {
+  document.getElementById(`id_${value.id}`).onclick = () => {
+      var count = localStorage.getItem(value.id);
+      count === null ? count = 1 : count++;
+      localStorage.setItem(value.id, count);
+      alert("Đã thêm sản phẩm vào thanh toán");
+  }
+})
