@@ -3,56 +3,56 @@ let treeArray = [
     id: 1,
     name: "Sen đá",
     src: "/assets/img/caysenda.jpg",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dol.",
+    desc: "Là một loại cây sukulen có thân thảo, dễ chăm sóc và phổ biến trong việc trồng trong nhà.",
     point: 300,
   },
   {
     id: 2,
     name: "Cây dây nhện",
     src: "/assets/img/caydaynhen.jpg",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dol.",
+    desc: "Là một loại cây cảnh phổ biến với các lá mảng xanh dẹp và dải mảng màu trắng hoặc vàng.",
     point: 200,
   },
   {
     id: 3,
     name: "Cây tuyết tùng",
     src: "/assets/img/caytuyettung.jpg",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dol.",
+    desc: "Là một loại cây gỗ nhỏ thuộc họ Cupressaceae. Chúng có nguồn gốc từ khu vực Bắc Mỹ và châu Á và được trồng rộng rãi trên toàn thế giới như cây cảnh và cây rào",
     point: 500,
   },
   {
     id: 4,
     name: "Xương rồng",
     src: "/assets/img/cayxuongrong.jpg",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dol.",
+    desc: "Loại cây xanh thủy sinh từ khu vực khí hậu ôn đới ấm đến nhiệt đới và thường được trồng làm cây cảnh trong nhà",
     point: 100,
   },
   {
     id: 5,
     name: "Sen đá",
     src: "/assets/img/caysenda.jpg",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dol.",
+    desc: "Là một loại cây sukulen có thân thảo, dễ chăm sóc và phổ biến trong việc trồng trong nhà.",
     point: 300,
   },
   {
     id: 6,
     name: "Cây dây nhện",
     src: "/assets/img/caydaynhen.jpg",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dol.",
+    desc: "Là một loại cây cảnh phổ biến với các lá mảng xanh dẹp và dải mảng màu trắng hoặc vàng.",
     point: 200,
   },
   {
     id: 7,
     name: "Cây tuyết tùng",
     src: "/assets/img/caytuyettung.jpg",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dol.",
+    desc: "Là một loại cây gỗ nhỏ thuộc họ Cupressaceae. Chúng có nguồn gốc từ khu vực Bắc Mỹ và châu Á và được trồng rộng rãi trên toàn thế giới như cây cảnh và cây rào",
     point: 500,
   },
   {
     id: 8,
     name: "Xương rồng",
     src: "/assets/img/cayxuongrong.jpg",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dol.",
+    desc: "Loại cây xanh thủy sinh từ khu vực khí hậu ôn đới ấm đến nhiệt đới và thường được trồng làm cây cảnh trong nhà",
     point: 100,
   },
 ];
@@ -83,10 +83,10 @@ function showT(curArray) {
 function setItem() {
   var count = 0;
   for (let i = 1; i <= 30; i++) {
-      var x = localStorage.getItem(i);
-      if(x > 0) count += parseInt(x);
+    var x = localStorage.getItem(i);
+    if (x > 0) count += parseInt(x);
   }
   document.getElementById("exchange_sp").innerHTML = count;
 }
- 
+
 setItem();
